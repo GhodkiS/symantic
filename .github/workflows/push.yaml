@@ -16,6 +16,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v3
       - name: semantic versioning
+        id: semantic-versioning
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_AUTHOR_NAME: saurabh[bot]
@@ -30,4 +31,9 @@ jobs:
             nvm install 20.8.1
             npm install --save-dev semantic-release
             npx semantic-release
+      - name: publish release
+        env:
+          GITHUB_RELEASE: ${{ steps.semantic-versioning.outputs.new-release-version }}
+        run: echo $GITHUB_RELEASE
+
 
