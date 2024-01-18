@@ -10,6 +10,7 @@ jobs:
           deployments: write
           contents: write
           checks: write
+          issues: write
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
