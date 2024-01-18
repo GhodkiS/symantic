@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3
       - name: semantic versioning
         env:
-          GITHUB_TOKEN: ${{ var.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GIT_AUTHOR_NAME: saurabh[bot]
           GIT_AUTHOR_EMAIL: saurabh.ghodki91@gmail.com
           GIT_COMMITTER_NAME: saurabh[bot]
