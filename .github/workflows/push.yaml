@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
-      - name: symatic versioning
+      - name: semantic versioning
         run: |
             npm install --save-dev semantic-release
-            npx symantic-release
+            npx semantic-release
 
