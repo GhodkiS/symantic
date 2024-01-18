@@ -7,5 +7,10 @@ jobs:
   symanticversioning:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: symatic versioning
+        run: |
+            npm install --save-dev semantic-release
+            npx symantic-release
 
