@@ -5,6 +5,11 @@ on:
       - 'branch1'
 jobs:
   symanticversioning:
+    permissions:
+          pull-requests: write
+          deployments: write
+          contents: write
+          checks: write
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
