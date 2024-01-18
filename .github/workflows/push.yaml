@@ -1,0 +1,11 @@
+name: symantic versioning
+on:
+  push:
+    branches:
+      - 'branch1'
+jobs:
+  symanticversioning:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
